@@ -2,8 +2,8 @@
 //  UIView+Constraints.swift
 //  ATFluidSegmentedControl
 //
-//  Created by Sasho Jadrovski on 9/22/16.
-//  Copyright © 2016 Sasho Jadrovski. All rights reserved. [http://jadrovski.com]
+//  Created by Array Tag, LLC on 9/22/16.
+//  Copyright © 2023 Array Tag, LLC. All rights reserved. [http://jadrovski.com]
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

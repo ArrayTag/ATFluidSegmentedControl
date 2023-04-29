@@ -266,7 +266,7 @@ segmentedControl.reloadData()
 
 ## Author
 
-This library has been adapted for Swift 3.0+ by **Sasho Jadrovski**, [http://jadrovski.com](http://jadrovski.com). The original creators are [LunApps](https://lunapps.com), as stated above.
+This library has been adapted for Swift 3.0+ by **Array Tag, LLC**, [http://jadrovski.com](http://jadrovski.com). The original creators are [LunApps](https://lunapps.com), as stated above.
 
 ## License
 
