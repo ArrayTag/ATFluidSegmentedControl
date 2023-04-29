@@ -1,16 +1,16 @@
-# SJFluidSegmentedControl
+# ATFluidSegmentedControl
 
-[![Version](https://img.shields.io/cocoapods/v/SJFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/SJFluidSegmentedControl)
-[![Downloads](https://img.shields.io/cocoapods/dt/SJFluidSegmentedControl.svg?maxAge=2592000)](http://cocoapods.org/pods/SJFluidSegmentedControl)
-[![License](https://img.shields.io/cocoapods/l/SJFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/SJFluidSegmentedControl)
-[![Platform](https://img.shields.io/cocoapods/p/SJFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/SJFluidSegmentedControl)
+[![Version](https://img.shields.io/cocoapods/v/ATFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/ATFluidSegmentedControl)
+[![Downloads](https://img.shields.io/cocoapods/dt/ATFluidSegmentedControl.svg?maxAge=2592000)](http://cocoapods.org/pods/ATFluidSegmentedControl)
+[![License](https://img.shields.io/cocoapods/l/ATFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/ATFluidSegmentedControl)
+[![Platform](https://img.shields.io/cocoapods/p/ATFluidSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/ATFluidSegmentedControl)
 [![Language](https://img.shields.io/badge/swift-3.0-green.svg?style=flat)](https://developer.apple.com/swift/)
 
 ## About
 
-If you are bored with using the default `UISegmentedControl`, this might save your day. `SJFluidSegmentedControl` is a customizable segmented control with an interactive transition, written in Swift 3.0 and it is based on [LUNSegmentedControl](https://github.com/LunApps/LUNSegmentedControl) by [LunApps](https://lunapps.com) which is written in Objective-C.
+If you are bored with using the default `UISegmentedControl`, this might save your day. `ATFluidSegmentedControl` is a customizable segmented control with an interactive transition, written in Swift 3.0 and it is based on [LUNSegmentedControl](https://github.com/LunApps/LUNSegmentedControl) by [LunApps](https://lunapps.com) which is written in Objective-C.
 
-![Sample](https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/sample.gif)
+![Sample](https://raw.githubusercontent.com/arraytag/ATFluidSegmentedControl/master/Screenshots/sample.gif)
 
 ## Example
 
@@ -22,13 +22,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - Xcode 8.0+
 - Swift 3.0+
 
-**Note:** `SJFluidSegmentedControl` is not intended to be used from Objective-C. For an Objective-C version of this library, please refer to the [LUNSegmentedControl](https://github.com/LunApps/LUNSegmentedControl).
+**Note:** `ATFluidSegmentedControl` is not intended to be used from Objective-C. For an Objective-C version of this library, please refer to the [LUNSegmentedControl](https://github.com/LunApps/LUNSegmentedControl).
 
 ## Features
 
 - [x] Easy to setup and use
 - [x] Lots of customizable options
-- [x] [Complete Documentation](http://cocoadocs.org/docsets/SJFluidSegmentedControl)
+- [x] [Complete Documentation](http://cocoadocs.org/docsets/ATFluidSegmentedControl)
 
 ## Communication
 
@@ -52,9 +52,9 @@ CocoaPods is a dependency manager for Cocoa projects. You can install it with th
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build SJFluidSegmentedControl 1.0.0+.
+> CocoaPods 1.1.0+ is required to build ATFluidSegmentedControl 1.0.0+.
 
-To integrate `SJFluidSegmentedControl` into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate `ATFluidSegmentedControl` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -62,7 +62,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'SJFluidSegmentedControl', '~> 1.0'
+    pod 'ATFluidSegmentedControl', '~> 1.0'
 end
 ```
 
@@ -74,7 +74,7 @@ $ pod install
 
 #### Manual installation
 
-`SJFluidSegmentedControl` can also be installed manually by simply dragging and dropping the files located in the Classes folder.
+`ATFluidSegmentedControl` can also be installed manually by simply dragging and dropping the files located in the Classes folder.
 
 ## Usage
 
@@ -82,17 +82,17 @@ $ pod install
 
 1. Drag &amp; drop a UIView in the View.
 	- By setting the background color of this view, you will also be setting the background color of the segmented control.
-2. Change its class to SJFluidSegmentedControl.
+2. Change its class to ATFluidSegmentedControl.
 3. Connect its data source.
 4. Implement the only required data source method that returns the number of segments in the segmented control:
 
 ```swift
-func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int
+func numberOfSegmentsInSegmentedControl(_ segmentedControl: ATFluidSegmentedControl) -> Int
 ```
 
 Additionaly, you can set the `cornerRadius`, `textColor`, `selectedSegmentTextColor`, `selectorViewColor`, `applyCornerRadiusToSelectorView`, `gradientBounceColor`, `shadowShowDuration`, `shadowHideDuration` and `shadowsEnabled` properties by using the Attributes inspector.
 
-![Attributes](https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/attributes.png)
+![Attributes](https://raw.githubusercontent.com/arraytag/ATFluidSegmentedControl/master/Screenshots/attributes.png)
 
 For customizing other of the available properties, create an `@IBOutlet` of the segmented control and access them via code.
 
@@ -102,13 +102,13 @@ It's very similar to using Interface Builder, instead you just setup the custom 
 
 ```swift
 // Conform to the data source (optionally, you can conform to the delegate)
-class ViewController: UIViewController, SJFluidSegmentedControlDataSource {
+class ViewController: UIViewController, ATFluidSegmentedControlDataSource {
 
 	// Define a lazy var
-	lazy var segmentedControl: SJFluidSegmentedControl = {
+	lazy var segmentedControl: ATFluidSegmentedControl = {
 	    [unowned self] in
 	    // Setup the frame per your needs
-	    let segmentedControl = SJFluidSegmentedControl(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+	    let segmentedControl = ATFluidSegmentedControl(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
 	    segmentedControl.dataSource = self
 	    return segmentedControl
 	}()
@@ -120,7 +120,7 @@ class ViewController: UIViewController, SJFluidSegmentedControlDataSource {
 	}
 
 	// Don't forget to implement the required data source method
-	func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int {
+	func numberOfSegmentsInSegmentedControl(_ segmentedControl: ATFluidSegmentedControl) -> Int {
 		return 3
 	}
 
@@ -132,49 +132,49 @@ class ViewController: UIViewController, SJFluidSegmentedControlDataSource {
 You must implement the **required** data source method that returns the number of segments:
 
 ```swift
-func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int
+func numberOfSegmentsInSegmentedControl(_ segmentedControl: ATFluidSegmentedControl) -> Int
 ```
 
 Return the titles for the segments of the segmented control, and take advantage of the NSAttributedString features to customize the text appearance using the following data source methods:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      titleForSegmentAtIndex index: Int) -> String?
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      attributedTitleForSegmentAtIndex index: Int) -> NSAttributedString?
 ```
 
 If necessary, you can set the titles for the selected state of the segments with the help of the following data source methods:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      titleForSelectedSegmentAtIndex index: Int) -> String?
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      attributedTitleForSelectedSegmentAtIndex index: Int) -> NSAttributedString?
 ```
 
 You can also set the title color for the selected state of the segments using this data source method:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      titleColorForSelectedSegmentAtIndex index: Int) -> UIColor
 ```
 
 In addition, you can set a color (or an array of colors to form a gradient) for each segment, as well as colors for the left and right bounces with the help of the following data source methods:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      gradientColorsForSelectedSegmentAtIndex index: Int) -> [UIColor]
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
-                                     gradientColorsForBounce bounce: SJFluidSegmentedControlBounce) -> [UIColor]
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
+                                     gradientColorsForBounce bounce: ATFluidSegmentedControlBounce) -> [UIColor]
 ```
 
 If you need a more complex layout for each segment, you can return a custom view instead with these data source methods:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      viewForSegmentAtIndex index: Int) -> UIView
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      viewForSelectedSegmentAtIndex index: Int) -> UIView
 
 ```
@@ -184,12 +184,12 @@ If you need a more complex layout for each segment, you can return a custom view
 The delegate methods provide callbacks for some of the most commonly needed events, such as:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      didChangeFromSegmentAtIndex fromIndex: Int,
                                      toSegmentAtIndex toIndex:Int)
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      willChangeFromSegment fromSegment: Int)
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      didScrollWithXOffset offset: CGFloat)
 
 ```
@@ -197,12 +197,12 @@ The delegate methods provide callbacks for some of the most commonly needed even
 Additionaly, if you need to take control over the transitions between the segments, you can use the following delegate methods:
 
 ```swift
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      setupSegmentAtIndex segmentIndex: Int,
                                      unselectedView unselectedSegmentView: UIView,
                                      selectedView selectedSegmentView: UIView,
                                      withSelectionPercent percent: CGFloat)
-@objc optional func segmentedControl(_ segmentedControl: SJFluidSegmentedControl,
+@objc optional func segmentedControl(_ segmentedControl: ATFluidSegmentedControl,
                                      resetSegmentAtIndex segmentIndex: Int,
                                      unselectedView unselectedSegmentView: UIView,
                                      selectedView selectedSegmentView: UIView)
@@ -220,10 +220,10 @@ open var currentSegment: Int
 fileprivate(set) public var segmentsCount: Int
 
 // The transition style between the default and selected state of the segments. Default is `.fade`.
-open var transitionStyle: SJFluidSegmentedControlTransitionStyle
+open var transitionStyle: ATFluidSegmentedControlTransitionStyle
 
 // The style of the selecton shape. Default is `.liquid`.
-open var shapeStyle: SJFluidSegmentedControlShapeStyle
+open var shapeStyle: ATFluidSegmentedControlShapeStyle
 
 // The corner radius of the segmented control. Default is `0.0`.
 @IBInspectable open var cornerRadius: CGFloat
@@ -270,4 +270,4 @@ This library has been adapted for Swift 3.0+ by **Sasho Jadrovski**, [http://jad
 
 ## License
 
-`SJFluidSegmentedControl` is available under the MIT license. See the LICENSE file for more info.
+`ATFluidSegmentedControl` is available under the MIT license. See the LICENSE file for more info.

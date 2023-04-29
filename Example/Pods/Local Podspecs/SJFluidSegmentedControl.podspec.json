@@ -1,13 +1,13 @@
 {
-  "name": "SJFluidSegmentedControl",
+  "name": "ATFluidSegmentedControl",
   "version": "1.1.1",
   "summary": "A segmented control with custom appearance and interactive animations.",
-  "description": "SJFluidSegmented control is a segmented control written in Swift with custom appearance and transition between the segments. It can be easily customized to suit your specific needs.",
-  "homepage": "https://github.com/sasojadrovski/SJFluidSegmentedControl",
+  "description": "ATFluidSegmented control is a segmented control written in Swift with custom appearance and transition between the segments. It can be easily customized to suit your specific needs.",
+  "homepage": "https://github.com/arraytag/ATFluidSegmentedControl",
   "screenshots": [
-    "https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/screenshot1.png",
-    "https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/screenshot2.png",
-    "https://raw.githubusercontent.com/sasojadrovski/SJFluidSegmentedControl/master/Screenshots/screenshot3.png"
+    "https://raw.githubusercontent.com/arraytag/ATFluidSegmentedControl/master/Screenshots/screenshot1.png",
+    "https://raw.githubusercontent.com/arraytag/ATFluidSegmentedControl/master/Screenshots/screenshot2.png",
+    "https://raw.githubusercontent.com/arraytag/ATFluidSegmentedControl/master/Screenshots/screenshot3.png"
   ],
   "license": {
     "type": "MIT",
@@ -17,12 +17,12 @@
     "Sasho Jadrovski": "saso.jadrovski@gmail.com"
   },
   "source": {
-    "git": "https://github.com/sasojadrovski/SJFluidSegmentedControl.git",
+    "git": "https://github.com/arraytag/ATFluidSegmentedControl.git",
     "tag": "1.1.1"
   },
-  "social_media_url": "https://twitter.com/sasojadrovski",
+  "social_media_url": "https://twitter.com/arraytag",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SJFluidSegmentedControl/Classes/**/*"
+  "source_files": "ATFluidSegmentedControl/Classes/**/*"
 }

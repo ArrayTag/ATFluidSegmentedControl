@@ -1,0 +1,6 @@
+framework module ATFluidSegmentedControl {
+  umbrella header "ATFluidSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

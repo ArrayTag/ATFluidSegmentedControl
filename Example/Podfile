@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'SJFluidSegmentedControl_Example' do
-  pod 'SJFluidSegmentedControl', :path => '../'
+target 'ATFluidSegmentedControl_Example' do
+  pod 'ATFluidSegmentedControl', :path => '../'
 
-  target 'SJFluidSegmentedControl_Tests' do
+  target 'ATFluidSegmentedControl_Tests' do
     inherit! :search_paths
 
     
