@@ -53,7 +53,7 @@ import UIKit
 }
 
 /// ATFluidSegmentedControl Data Source Protocol
-@objc public protocol ATFluidSegmentedControlDataSource: class {
+@objc public protocol ATFluidSegmentedControlDataSource: AnyObject {
     
     /// **Required.** Tells the data source to return the number of segments in a segmented control.
     ///
@@ -145,7 +145,7 @@ import UIKit
 }
 
 /// ATFluidSegmentedControl Delegate Protocol
-@objc public protocol ATFluidSegmentedControlDelegate: class {
+@objc public protocol ATFluidSegmentedControlDelegate: AnyObject {
     
     /// Tells the delegate that the segmented control's selected segment index changed.
     ///
@@ -307,7 +307,7 @@ public class ATFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         $0.delegate = self
         $0.layer.masksToBounds = true
         self.addSubview($0)
-        self.bringSubview(toFront: $0)
+        self.bringSubviewToFront($0)
         return $0
     }(UIScrollView(frame: .zero))
     
@@ -1015,7 +1015,7 @@ public class ATFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
             let animation = CABasicAnimation(keyPath: "shadowOpacity")
             animation.duration = CFTimeInterval(isVisible ? shadowShowDuration : shadowHideDuration)
             animation.toValue = CFTimeInterval(isVisible ? 0.7 : 0.0)
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             animation.isRemovedOnCompletion = false
             shadowView.layer.add(animation, forKey: nil)
         } else {
@@ -1129,8 +1129,8 @@ public class ATFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         }
         switch transitionStyle {
         case .fade:
-            selectedSegmentViewContainers[index].alpha = 1 - fabs(percent)
-            segmentViewContainers[index].alpha = fabs(percent)
+            selectedSegmentViewContainers[index].alpha = 1 - abs(percent)
+            segmentViewContainers[index].alpha = abs(percent)
         case .slide:
             let segmentView = selectedSegmentViewContainers[index]
             if segmentView.layer.mask == nil {
@@ -1272,7 +1272,7 @@ public class ATFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         let p3x = height / 2 + (width - height) * 3 / 4
         let p3yLeftPartOfExpression = (p1.y + p4.y * 3) / 4
         
-        let p2p3yRightPartOfExpression = height * 0.1 * (0.2 - fabs(0.5 - newPercentage)) / 0.2
+        let p2p3yRightPartOfExpression = height * 0.1 * (0.2 - abs(0.5 - newPercentage)) / 0.2
         if newPercentage > 0.3 && newPercentage < 0.7 {
             let p2y = p2yLeftPartOfExpression + p2p3yRightPartOfExpression
             p2 = CGPoint(x: p2x, y: p2y)
@@ -1455,9 +1455,9 @@ public class ATFluidSegmentedControl: UIView, UIGestureRecognizerDelegate {
         removeOldConstraints()
         reinstallViews()
         reinstallConstraints()
-        self.sendSubview(toBack: scrollView)
+        self.sendSubviewToBack(scrollView)
         if let gradientViewContainer = gradientViewContainer {
-            self.sendSubview(toBack: gradientViewContainer)
+            self.sendSubviewToBack(gradientViewContainer)
         }
         updateTransitionStyle()
         if didViewLayoutSubviews {
